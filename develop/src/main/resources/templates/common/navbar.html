@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 
 <body>
 <div th:fragment="common-navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -18,6 +19,9 @@
                 <li class="active"><a th:text="#{navbar.home.text}" href="#"></a></li>
                 <li><a th:text="#{navbar.about.text}" href="#about"></a></li>
                 <li><a href="/contract">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a th:href="@{/login}" th:text="#{nav.login.text}"></a></li>
             </ul>
         </div><!--/.nav-collapse -->
     </div>
